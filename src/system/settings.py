@@ -37,11 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'rest_framework',
     'rest_framework.authtoken',
     'system',
     'base',
     'movie',
+=======
+    'system',
+>>>>>>> management command to wait for db
 ]
 
 MIDDLEWARE = [
