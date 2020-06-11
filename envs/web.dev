@@ -1,0 +1,9 @@
+DEBUG=1
+SECRET_KEY=r1v^ens1c1u58(ho6piup%30%7bszoz1g$@@t%v692$wt*y_pb
+DJANGO_ALLOWED_HOSTS=*,
+
+SQL_DATABASE=mmdb
+SQL_USER=db_admin
+SQL_PASSWORD=db_password
+SQL_HOST=db
+SQL_PORT=5432
