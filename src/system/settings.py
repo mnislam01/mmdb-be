@@ -43,9 +43,12 @@ INSTALLED_APPS = [
     'system',
     'base',
     'movie',
+<<<<<<< HEAD
 =======
     'system',
 >>>>>>> management command to wait for db
+=======
+>>>>>>> Basic setup with initial models
 ]
 
 MIDDLEWARE = [
