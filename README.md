@@ -2,7 +2,7 @@
 
 ### Build
 `
-docker-compose buil
+docker-compose build
 `
 
 ### Run
