@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 COPY src /app
 
 
-COPY run.sh /run.sh
+COPY compose/run.sh /run.sh
 RUN sed -i 's/\r//' /run.sh
 RUN chmod +x /run.sh
 

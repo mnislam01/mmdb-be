@@ -2,7 +2,9 @@ version: "3"
 
 services: 
     web:
-        build: .
+        build:
+            context: .
+            dockerfile: compose/Dockerfile
         ports: 
             - "8001:8001"
         volumes:
