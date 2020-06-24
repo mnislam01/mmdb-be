@@ -36,6 +36,7 @@ class Movie(BaseModel):
         blank=False
     )
     year = models.IntegerField(
+        null=True,
         blank=True
     )
     rating = models.IntegerField(
