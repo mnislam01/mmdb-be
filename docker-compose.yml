@@ -1,14 +1,16 @@
-version: "3"
+version: "3.7"
 
 services: 
     web:
         build:
             context: .
-            dockerfile: compose/Dockerfile
-        ports: 
-            - "8001:8001"
+            dockerfile: compose/Dockerfile-Web
+        expose:
+            - 8000
         volumes:
             - ./src:/app
+            - static_volume:/static
+            - media_volume:/media
         env_file:
             - ./envs/web.dev
         depends_on: 
@@ -21,5 +23,19 @@ services:
         env_file:
             - ./envs/db.dev
 
+    nginx:
+        build:
+            context: .
+            dockerfile: compose/Dockerfile-Nginx
+        volumes:
+            - static_volume:/static
+            - media_volume:/media
+        ports:
+            - 1337:80
+        depends_on:
+            - web
+
 volumes:
     postgres_data:
+    static_volume:
+    media_volume:

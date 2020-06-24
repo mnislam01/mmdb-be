@@ -44,6 +44,10 @@ class Movie(BaseModel):
         validators=[rating_validator],
         blank=False
     )
+    image = models.ImageField(
+        blank=True,
+        upload_to='images/%Y/%m/%d/'
+    )
 
 
 class WatchList(BaseModel):
